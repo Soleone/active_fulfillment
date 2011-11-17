@@ -93,6 +93,7 @@ module ActiveMerchant
           add_credentials(xml)
           xml.tag! 'Warehouse', WAREHOUSES[options[:warehouse]]
           xml.tag! 'ProductCode', options[:sku]
+          xml.tag! 'IncludeEmpty' if options[:include_empty]
         end
       end
       
